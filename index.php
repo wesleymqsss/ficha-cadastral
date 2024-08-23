@@ -1,6 +1,7 @@
 <?php
     require "constantes.php";
     require "data.php";
+    require "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -29,11 +30,11 @@
         </strong></p>
         <p>Salário Mensal: 
         <strong>R$
-            <?= number_format($salarioMensal,2, ",",".")?>
+            <?=convertNumberToBRL($salarioMensal);?>
         </strong></p>
         <p>Salário Anual: 
         <strong>R$
-            <?= number_format($salarioMensal * 12,2, ",",".")?>
+            <?=calcularSalarioAnual($salarioMensal);?>
         </strong></p>
         <p>Status de Emprego: 
         <strong>
@@ -41,7 +42,7 @@
         </strong></p>
         <p>Anos para Aaposentadoria: 
         <strong>
-            <?= $anosParaAposentar - $idade ?>    
+            <?= calculoParaAposentadoria($idade, $sexo);?>    
         </strong></p>
         <p>Habilidades: <strong>
             <?php

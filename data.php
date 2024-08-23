@@ -2,7 +2,7 @@
  $nome = "Wesley Marques";
     $idade = 25;
     $sexo = "M";
-    $salarioMensal = 2210.30;
+    $salarioMensal = 1000.30;
     $estaEmpregado = false;
     $habilidade = ["PHP", "Javascript", "HTML", "CSS"];
 
